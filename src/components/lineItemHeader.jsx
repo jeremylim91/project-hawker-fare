@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PersonDropdown from './personDropdown.jsx';
 
 export default function LineItemHeader({ infoMasterList }) {
   // destructure
@@ -14,6 +15,7 @@ export default function LineItemHeader({ infoMasterList }) {
 
         {lineItem.price}
       </span>
+      <PersonDropdown infoMasterList={infoMasterList} />
     </li>
   ));
   return (
