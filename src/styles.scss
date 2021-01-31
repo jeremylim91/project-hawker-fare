@@ -1,7 +1,28 @@
 body {
   background-color: pink;
 }
+.navBar-container {
+  position: fixed;
+  background-color: rgb(218, 210, 210);
+  height: 100vh;
+  width: 10rem;
+  z-index: 1;
+  transition: width 500ms ease;
+}
+.hawkerDisplay-container {
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  margin-left: 10rem;
+}
 
-.price {
-  margin-left: 1.4rem;
+.highlight {
+  border: 2px solid yellow;
+}
+
+.CategoriesDivs:hover {
+  cursor: pointer;
+  font-weight: 600;
 }

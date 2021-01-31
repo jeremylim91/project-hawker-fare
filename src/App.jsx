@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
-import CreateBill from './components/createBill.jsx';
-import InputDinnerDetails from './components/inputDinnerDetails.jsx';
+import HawkerDisplay from './components/hawker-display.jsx';
+import NavBar from './components/nav-bar.jsx';
 
 export default function App() {
-  const [bill, setBill] = useState(null);
-  /* Qn: why save the info as a state?
-  ans: cos at the end of the app we wld need the info the update the db */
+  const [categoryIdState, setCategoryIdState] = useState(null);
+
+  const changeCategoryId = (value) => {
+    console.log('value is:');
+    console.log(value);
+    setCategoryIdState(value);
+  };
   return (
     <div>
-      <h1> Hotpot app!</h1>
-      {/* if the state of "bill" is null, render createBill component to create new Bill */}
-      {/* if state of bill has data, rm createBill comp and render InputDinnerDetails comp */}
-      {bill === null ? <CreateBill setBill={setBill} /> : <InputDinnerDetails /> }
-      {/* ^^ passing the setBill fn above is known as "lifting", which we covered in class */}
+      <h1> Serangoon market!</h1>
+
+      <NavBar changeCategoryId={changeCategoryId} categoryIdState={categoryIdState} />
+      <HawkerDisplay categoryIdState={categoryIdState} />
 
     </div>
   );

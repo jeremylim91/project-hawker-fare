@@ -2,8 +2,9 @@ import pkg from 'sequelize';
 import url from 'url';
 import allConfig from '../config/config.js';
 
-import billModel from './bill.mjs';
-import personModel from './person.mjs';
+import userModel from './user.mjs';
+import stallModel from './stall.mjs';
+import categoryModel from './category.mjs';
 
 const { Sequelize } = pkg;
 const env = process.env.NODE_ENV || 'development';
@@ -34,12 +35,13 @@ if (env === 'production') {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
-db.Bill = billModel(sequelize, Sequelize.DataTypes);
-db.Person = personModel(sequelize, Sequelize.DataTypes);
+db.User = userModel(sequelize, Sequelize.DataTypes);
+db.Stall = stallModel(sequelize, Sequelize.DataTypes);
+db.Category = categoryModel(sequelize, Sequelize.DataTypes);
 
 // specify the associations
-db.Bill.hasMany(db.Person);
-db.Person.belongsTo(db.Bill);
+db.Stall.belongsTo(db.Category);
+db.Category.hasMany(db.Stall);
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
