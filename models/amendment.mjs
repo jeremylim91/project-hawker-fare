@@ -1,10 +1,17 @@
-export default function stallModel(sequelize, DataTypes) {
-  return sequelize.define('stall', {
+export default function amendmentModel(sequelize, DataTypes) {
+  return sequelize.define('amendment', {
     id: {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
       type: DataTypes.INTEGER,
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'users',
+        key: 'id',
+      },
     },
     unitNum: {
       allowNull: false,
@@ -28,9 +35,9 @@ export default function stallModel(sequelize, DataTypes) {
     menu: {
       type: DataTypes.ARRAY(DataTypes.TEXT),
     },
-    isActive: {
+    status: {
       allowNull: false,
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
     },
     createdAt: {
       allowNull: false,

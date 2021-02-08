@@ -8,7 +8,21 @@ export default function initCategoriesController(db) {
       console.log(error);
     }
   };
+
+  const getCategoryUsingCategoryId = async (req, res) => {
+    const { categoryId } = req.body;
+    try {
+      const categoryInstance = await db.Category.findOne({
+        where: {
+          id: categoryId,
+        },
+      });
+      res.send(categoryInstance);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return {
-    index,
+    index, getCategoryUsingCategoryId,
   };
 }

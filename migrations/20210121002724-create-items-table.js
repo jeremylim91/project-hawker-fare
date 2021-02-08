@@ -70,7 +70,7 @@ module.exports = {
       },
       unit_num: {
         allowNull: false,
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       name: {
         allowNull: false,
@@ -90,6 +90,63 @@ module.exports = {
       menu: {
         type: Sequelize.ARRAY(Sequelize.TEXT),
       },
+      is_active: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN,
+      },
+      created_at: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updated_at: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+    });
+
+    /*= ============================================
+        AMENDMENTS TABLE
+    ============================================= */
+    await queryInterface.createTable('amendments', {
+      id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER,
+      },
+      user_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'users',
+          key: 'id',
+        },
+      },
+      unit_num: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
+      name: {
+        allowNull: false,
+        type: Sequelize.TEXT,
+      },
+      category_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'categories',
+          key: 'id',
+        },
+      },
+      operating_hours: {
+        allowNull: true,
+        type: Sequelize.TEXT,
+      },
+      menu: {
+        type: Sequelize.ARRAY(Sequelize.TEXT),
+      },
+      status: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
       created_at: {
         allowNull: false,
         type: Sequelize.DATE,
@@ -102,9 +159,9 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('users');
-    // stalls table needs to be dropped first because stalls references categories
     await queryInterface.dropTable('stalls');
+    await queryInterface.dropTable('amendments');
     await queryInterface.dropTable('categories');
+    await queryInterface.dropTable('users');
   },
 };

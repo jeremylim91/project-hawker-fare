@@ -12,6 +12,23 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
+      {
+        test: /\.(png|jp(e*)g|svg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'images/[hash]-[name].[ext]',
+              outputPath: '/icons',
+              publicPath: '/icons',
+            },
+          },
+        ],
+      },
+      {
         test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
@@ -22,16 +39,15 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jp(e*)g|svg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'images/[hash]-[name].[ext]',
-            },
-          },
-        ],
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
       },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack', 'url-loader'],
+      },
+
     ],
   },
 };

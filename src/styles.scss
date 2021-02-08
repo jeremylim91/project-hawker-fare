@@ -1,15 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Freckle+Face&family=Roboto&display=swap");
+
+.navbar-header {
+  font-family: "Freckle Face", "cursive";
+  font-weight: 900;
+  color: #ff7070;
+  font-size: 1.5rem;
+  padding-left: 0.8rem;
+}
+.cuisines-header {
+  margin-top: 1rem;
+  font-family: "Freckle Face", "cursive";
+  color: #f9eb83;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.view-amendments-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-size: 1rem;
+}
 body {
-  background-color: pink;
+  background-color: white;
+}
+.background-layout {
 }
 .navBar-container {
   position: fixed;
-  background-color: rgb(218, 210, 210);
+  background-color: rgb(184, 63, 63, 0.8);
   height: 100vh;
   width: 10rem;
   z-index: 1;
   transition: width 500ms ease;
+  overflow: scroll;
 }
+.reset-filter-btn {
+  margin-top: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.no-amendments-to-display {
+  margin-top: 5rem;
+  margin-left: 15rem;
+}
+
 .hawkerDisplay-container {
+  position: relative;
+  display: inline-block;
+  // cursor: move;
+  cursor: url("icons/walking-man-cursor.svg"), move !important;
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  margin-left: 10rem;
+  // background-image: url(./icons/tiles-2.svg);
+}
+.review-suggested-ammendments-container {
+  position: relative;
   display: inline-block;
   background-color: rgb(255, 255, 255);
   height: 100vh;
@@ -17,12 +68,113 @@ body {
   z-index: 2;
   margin-left: 10rem;
 }
+.topRowSection1Container {
+  position: absolute;
+  left: 720px;
+  top: 200px;
+  z-index: 5;
+  width: 500px;
+  transform: rotate((30deg));
+  display: flex;
+  justify-content: flex-end;
+}
+.middleRowsection1Container {
+  position: absolute;
+  left: 200px;
+  top: 200px;
+  z-index: 5;
+  width: 200px;
+  transform: rotate((30deg));
+  display: flex;
+  justify-content: flex-end;
+}
+.middleRowsection2Container {
+  position: absolute;
+  left: 380px;
+  top: 200px;
+  z-index: 5;
+  width: 320px;
+  transform: rotate((-30deg));
+  display: flex;
+  justify-content: flex-end;
+}
+.bottomRowSection1Container {
+  position: relative;
+  left: 490px;
+  top: 600px;
+  z-index: 15;
+  width: 360px;
+  transform: rotate((30deg));
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+.bottomRowSection2Container {
+  position: absolute;
+  left: 0px;
+  top: 360px;
+  z-index: 15;
+  width: 480px;
+  transform: rotate((30deg));
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+.toilet-container {
+  width: 100px;
+  height: 60px;
+  transform: rotate((-30deg));
+  display: inline-block;
+  border-width: solid 5px black;
+  background-color: rgb(193, 193, 193);
+  margin: 0px !important;
+  padding: 0px !important;
+  position: absolute;
+  top: 140px;
+  left: 30px;
+}
+.stalls {
+  width: 80px;
+  transform: rotate((-30deg));
+  display: inline-block;
+  border-width: 0px;
+  background-color: transparent;
+  margin: 0px !important;
+  padding: 0px !important;
+  cursor: help !important;
+}
+.middleRowSect2Stalls {
+  width: 80px;
+  transform: rotate((30deg));
+  display: inline-block;
+  border-width: 0px;
+  background-color: transparent;
+  margin: 0px !important;
+  padding: 0px !important;
+  cursor: help !important;
+}
 
 .highlight {
-  border: 2px solid yellow;
+  border: 3px solid rgb(0, 170, 248);
 }
 
 .CategoriesDivs:hover {
-  cursor: pointer;
+  // cursor: pointer;
   font-weight: 600;
 }
+
+.removeButtonStyle {
+  background-color: transparent;
+  border-width: 0px;
+  font-weight: 600;
+}
+
+.navBarButtons {
+  margin-bottom: 0.5rem;
+}
+
+// .toilet {
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+// }

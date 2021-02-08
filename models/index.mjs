@@ -5,6 +5,7 @@ import allConfig from '../config/config.js';
 import userModel from './user.mjs';
 import stallModel from './stall.mjs';
 import categoryModel from './category.mjs';
+import amendmentModel from './amendment.mjs';
 
 const { Sequelize } = pkg;
 const env = process.env.NODE_ENV || 'development';
@@ -38,10 +39,17 @@ if (env === 'production') {
 db.User = userModel(sequelize, Sequelize.DataTypes);
 db.Stall = stallModel(sequelize, Sequelize.DataTypes);
 db.Category = categoryModel(sequelize, Sequelize.DataTypes);
+db.Amendment = amendmentModel(sequelize, Sequelize.DataTypes);
 
 // specify the associations
 db.Stall.belongsTo(db.Category);
 db.Category.hasMany(db.Stall);
+
+db.Amendment.belongsTo(db.Category);
+db.Category.hasMany(db.Amendment);
+
+db.User.hasMany(db.Amendment);
+db.Amendment.belongsTo(db.User);
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

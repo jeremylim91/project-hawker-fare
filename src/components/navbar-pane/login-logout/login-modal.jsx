@@ -3,7 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 
-export default function LoginModal() {
+export default function LoginModal({ changeUserEmail, updateUserIsAdmin }) {
   const [show, setShow] = useState(false);
   const [fEmail, setFEmail] = useState('');
   const [fPassword, setFPassword] = useState('');
@@ -14,8 +14,16 @@ export default function LoginModal() {
   const handlePasswordInputChange = (e) => setFPassword(e.target.value);
 
   const handleLogin = () => {
-    setShow(false);
+    handleClose();
     // do axios post to verify login and set cookie in client browser
+    axios.post('/verifyLogin', { fEmail, fPassword })
+      .then(({ data }) => {
+        // update the state with this email
+        changeUserEmail(data.userName);
+        // if data.userName is not null, give him the
+        updateUserIsAdmin(data.updateUserIsAdmin);
+      })
+      .catch((error) => (console.log(error)));
   };
   return (
     <div>
@@ -24,7 +32,7 @@ export default function LoginModal() {
       </Button>
 
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title>Login</Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -89,7 +97,7 @@ export default function LoginModal() {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={handleLogin}>
             Login
           </Button>
         </Modal.Footer>
