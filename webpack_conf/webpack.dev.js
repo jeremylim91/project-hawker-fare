@@ -26,6 +26,9 @@ module.exports = merge(common, {
             ].filter(Boolean),
           },
         },
+        // query: {
+        //   compact: false,
+        // },
       },
     ],
   },

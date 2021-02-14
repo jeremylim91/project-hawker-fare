@@ -13,115 +13,95 @@ function TopRowStallIcon() {
       xlink="http://www.w3.org/1999/xlink"
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
-      width="100%"
+      width="90%"
       version="1.1"
       viewBox="0 0 764.192 1024"
     >
-      <metadata>
-        <setting key="DimensionsVisible" value="1" />
-        <setting key="SnapToGrid" value="1" />
-        <setting key="SnapToPoints" value="0" />
-        <setting key="GuidesVisible" value="1" />
-        <setting key="RulersVisible" value="1" />
-        <setting key="SnapToEdges" value="0" />
-        <setting key="DisplayWhiteBackground" value="1" />
-        <setting key="SnapToGuides" value="1" />
-        <setting key="GridSpacing" value="50" />
-        <setting key="Units" value="Pixels" />
-        <setting key="DynamicGuides" value="1" />
-        <setting key="New" value="1" />
-      </metadata>
+
       <defs />
-      <g id="Layer 1" layerName="Layer 1">
+      <g id="Layer 1">
+        <path stroke="#f5eeee" shadowColor="#322b2b" shadowOffset="5.81494" strokeWidth="0.1" fill="#9ba3a7" fillRule="evenodd" strokeLinecap="butt" shadowAngle="0.46248" opacity="1" strokeLinejoin="miter" shadowRadius="19.614" d="M21.6506+787.5L346.41+600L736.122+825L411.362+1012.5L21.6506+787.5Z" strokeOpacity="0" shadowOpacity="0.548547" />
+        <path stroke="#e1e8eb" shadowColor="#797d7f" shadowOffset="0" strokeWidth="1" fill="#cbd4d8" fillRule="evenodd" strokeLinecap="butt" shadowAngle="0.415828" opacity="1" strokeLinejoin="miter" shadowRadius="6.8282" d="M346.41+25L21.6506+212.5" shadowOpacity="1" />
+        <path stroke="#adb1b2" fillRule="evenodd" strokeOpacity="0" strokeWidth="1" d="M-162.636+250L227.075+475L227.075+750L-162.636+525L-162.636+250Z" fill="#eadd8d" strokeLinecap="butt" fillOpacity="0" opacity="1" strokeLinejoin="miter" />
+        <path stroke="#f5eeee" fillRule="evenodd" strokeOpacity="0" strokeWidth="1" d="M736.122+250L346.41+25L346.41+600L736.122+825L736.122+250Z" fill="#b9c2c7" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+        <path stroke="#f5eeee" shadowColor="#000000" shadowOffset="0" strokeWidth="1" fill="#c8d0d4" fillRule="evenodd" strokeLinecap="butt" shadowAngle="1.5708" opacity="1" strokeLinejoin="miter" shadowRadius="0.330396" d="M411.362+437.5L736.122+250L736.122+825L411.362+1012.5L411.362+437.5Z" strokeOpacity="0" strokeDasharray="0,6" shadowOpacity="0" />
+        <path stroke="#f5eeee" shadowColor="#000000" shadowOffset="0" strokeWidth="1" fill="#afb6ba" fillRule="evenodd" strokeLinecap="butt" shadowAngle="1.5708" opacity="1" strokeLinejoin="miter" shadowRadius="0.330396" d="M21.6506+212.5L346.41+25L346.41+600L21.6506+787.5L21.6506+212.5Z" strokeOpacity="0" strokeDasharray="0,6" shadowOpacity="0" />
+        <path stroke="#f5eeee" shadowColor="#322b2b" shadowOffset="5.81494" strokeWidth="0.1" fill="#7ca9ef" fillRule="evenodd" strokeLinecap="butt" shadowAngle="0.46248" opacity="1" strokeLinejoin="miter" shadowRadius="19.614" d="M21.6506+212.5L346.41+25L736.122+250L411.362+437.5L21.6506+212.5Z" strokeOpacity="0" shadowOpacity="0.548547" />
         <g opacity="1">
-          <path stroke="#f5eeee" shadowColor="#322b2b" shadowOffset="5.81494" strokeWidth="0.1" fill="#dfe3e9" strokeLinecap="butt" shadowAngle="0.46248" strokeLinejoin="round" opacity="1" shadowRadius="19.614" d="M21.6506+787.5L346.41+600L736.122+825L411.362+1012.5L21.6506+787.5Z" strokeOpacity="0" shadowOpacity="0.548547" />
-          <path stroke="#e1e8eb" shadowColor="#797d7f" shadowOffset="0" strokeWidth="1" fill="#cbd4d8" strokeLinecap="butt" shadowAngle="0.415828" strokeLinejoin="round" opacity="1" shadowRadius="6.8282" d="M346.41+25L21.6506+212.5" shadowOpacity="1" />
-          <path stroke="#adb1b2" strokeOpacity="0" strokeWidth="1" d="M21.6506+212.5L411.362+437.5L411.362+712.5L21.6506+487.5L21.6506+212.5Z" fill="#eadd8d" strokeLinecap="butt" fillOpacity="0" opacity="1" strokeLinejoin="round" />
-          <path stroke="#f5eeee" strokeOpacity="0" strokeWidth="1" d="M736.122+250L346.41+25L346.41+600L736.122+825L736.122+250Z" fill="#cbd4d8" strokeLinecap="butt" opacity="1" strokeLinejoin="round" />
-          <path stroke="#f5eeee" shadowColor="#000000" shadowOffset="0" strokeWidth="1" fill="#afb4b7" strokeLinecap="butt" shadowAngle="1.5708" strokeLinejoin="round" opacity="1" strokeDasharray="0,6" shadowRadius="0.330396" d="M411.362+437.5L736.122+250L736.122+825L411.362+1012.5L411.362+437.5Z" strokeOpacity="0" shadowOpacity="0" />
-          <path stroke="#f5eeee" shadowColor="#000000" shadowOffset="0" strokeWidth="1" fill="#b7b6af" strokeLinecap="butt" shadowAngle="1.5708" strokeLinejoin="round" opacity="1" strokeDasharray="0,6" shadowRadius="0.330396" d="M21.6506+212.5L346.41+25L346.41+600L21.6506+787.5L21.6506+212.5Z" strokeOpacity="0" shadowOpacity="0" />
-          <path stroke="#f5eeee" strokeOpacity="0" strokeWidth="1" d="M21.6506+487.5L341.282+672.039L411.362+712.5L411.362+1012.5L21.6506+787.5L21.6506+487.5Z" fill="#cbd4d8" strokeLinecap="butt" opacity="1" strokeLinejoin="round" />
-          <path stroke="#f5eeee" shadowColor="#322b2b" shadowOffset="5.81494" strokeWidth="0.1" fill="#7ca9ef" strokeLinecap="butt" shadowAngle="0.46248" strokeLinejoin="round" opacity="1" shadowRadius="19.614" d="M21.6506+212.5L346.41+25L736.122+250L411.362+437.5L21.6506+212.5Z" strokeOpacity="0" shadowOpacity="0.548547" />
+          <g opacity="1">
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M736.122+725L714.471+737.5L714.471+762.5L736.122+750L736.122+725Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M714.471+737.5L692.82+750L692.82+775L714.471+762.5L714.471+737.5Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M671.17+762.5L649.519+775L649.519+800L671.17+787.5L671.17+762.5Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M692.82+750L671.17+762.5L671.17+787.5L692.82+775L692.82+750Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M649.519+775L627.868+787.5L627.868+812.5L649.519+800L649.519+775Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M627.868+787.5L606.218+800L606.218+825L627.868+812.5L627.868+787.5Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M584.567+812.5L562.917+825L562.917+850L584.567+837.5L584.567+812.5Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M606.218+800L584.567+812.5L584.567+837.5L606.218+825L606.218+800Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M562.917+825L541.266+837.5L541.266+862.5L562.917+850L562.917+825Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M541.266+837.5L519.615+850L519.615+875L541.266+862.5L541.266+837.5Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M454.663+887.5L433.013+900L433.013+925L454.663+912.5L454.663+887.5Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M519.615+850L497.965+862.5L497.965+887.5L519.615+875L519.615+850Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M497.965+862.5L476.314+875L476.314+900L497.965+887.5L497.965+862.5Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M476.314+875L454.663+887.5L454.663+912.5L476.314+900L476.314+875Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M433.013+900L411.362+912.5L411.362+937.5L433.013+925L433.013+900Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+          </g>
+          <g opacity="1">
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M736.122+750L714.471+762.5L714.471+787.5L736.122+775L736.122+750Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M714.471+762.5L692.82+775L692.82+800L714.471+787.5L714.471+762.5Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M671.17+787.5L649.519+800L649.519+825L671.17+812.5L671.17+787.5Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M692.82+775L671.17+787.5L671.17+812.5L692.82+800L692.82+775Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M649.519+800L627.868+812.5L627.868+837.5L649.519+825L649.519+800Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M627.868+812.5L606.218+825L606.218+850L627.868+837.5L627.868+812.5Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M584.567+837.5L562.917+850L562.917+875L584.567+862.5L584.567+837.5Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M606.218+825L584.567+837.5L584.567+862.5L606.218+850L606.218+825Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M562.917+850L541.266+862.5L541.266+887.5L562.917+875L562.917+850Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M541.266+862.5L519.615+875L519.615+900L541.266+887.5L541.266+862.5Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M454.663+912.5L433.013+925L433.013+950L454.663+937.5L454.663+912.5Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M519.615+875L497.965+887.5L497.965+912.5L519.615+900L519.615+875Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M497.965+887.5L476.314+900L476.314+925L497.965+912.5L497.965+887.5Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M476.314+900L454.663+912.5L454.663+937.5L476.314+925L476.314+900Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M433.013+925L411.362+937.5L411.362+962.5L433.013+950L433.013+925Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+          </g>
         </g>
+        <g opacity="1">
+          <g opacity="1">
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M736.122+775L714.471+787.5L714.471+812.5L736.122+800L736.122+775Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M714.471+787.5L692.82+800L692.82+825L714.471+812.5L714.471+787.5Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M671.17+812.5L649.519+825L649.519+850L671.17+837.5L671.17+812.5Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M692.82+800L671.17+812.5L671.17+837.5L692.82+825L692.82+800Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M649.519+825L627.868+837.5L627.868+862.5L649.519+850L649.519+825Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M627.868+837.5L606.218+850L606.218+875L627.868+862.5L627.868+837.5Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M584.567+862.5L562.917+875L562.917+900L584.567+887.5L584.567+862.5Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M606.218+850L584.567+862.5L584.567+887.5L606.218+875L606.218+850Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M562.917+875L541.266+887.5L541.266+912.5L562.917+900L562.917+875Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M541.266+887.5L519.615+900L519.615+925L541.266+912.5L541.266+887.5Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M454.663+937.5L433.013+950L433.013+975L454.663+962.5L454.663+937.5Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M519.615+900L497.965+912.5L497.965+937.5L519.615+925L519.615+900Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M497.965+912.5L476.314+925L476.314+950L497.965+937.5L497.965+912.5Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M476.314+925L454.663+937.5L454.663+962.5L476.314+950L476.314+925Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M433.013+950L411.362+962.5L411.362+987.5L433.013+975L433.013+950Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+          </g>
+          <g opacity="1">
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M736.122+800L714.471+812.5L714.471+837.5L736.122+825L736.122+800Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M714.471+812.5L692.82+825L692.82+850L714.471+837.5L714.471+812.5Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M671.17+837.5L649.519+850L649.519+875L671.17+862.5L671.17+837.5Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M692.82+825L671.17+837.5L671.17+862.5L692.82+850L692.82+825Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M649.519+850L627.868+862.5L627.868+887.5L649.519+875L649.519+850Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M627.868+862.5L606.218+875L606.218+900L627.868+887.5L627.868+862.5Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M584.567+887.5L562.917+900L562.917+925L584.567+912.5L584.567+887.5Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M606.218+875L584.567+887.5L584.567+912.5L606.218+900L606.218+875Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M562.917+900L541.266+912.5L541.266+937.5L562.917+925L562.917+900Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M541.266+912.5L519.615+925L519.615+950L541.266+937.5L541.266+912.5Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M454.663+962.5L433.013+975L433.013+1000L454.663+987.5L454.663+962.5Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M519.615+925L497.965+937.5L497.965+962.5L519.615+950L519.615+925Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M497.965+937.5L476.314+950L476.314+975L497.965+962.5L497.965+937.5Z" fill="#e4c364" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M476.314+950L454.663+962.5L454.663+987.5L476.314+975L476.314+950Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+            <path stroke="#ffffff" fillRule="evenodd" strokeWidth="1" d="M433.013+975L411.362+987.5L411.362+1012.5L433.013+1000L433.013+975Z" fill="#e4d564" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
+          </g>
+        </g>
+        <path stroke="#f5eeee" fillRule="evenodd" strokeOpacity="0" strokeWidth="1" d="M21.6506+487.5L341.282+672.039L411.362+712.5L411.362+1012.5L21.6506+787.5L21.6506+487.5Z" fill="#d3dce0" strokeLinecap="butt" opacity="1" strokeLinejoin="miter" />
       </g>
     </svg>
-  // <svg
-  //   xmlns="http://www.w3.org/2000/svg"
-  //   xmlnsVectornator="http://vectornator.io"
-  //   fillRule="evenodd"
-  //   strokeLinecap="round"
-  //   strokeLinejoin="round"
-  //   clipRule="evenodd"
-  //   viewBox="0 0 764.192 1024"
-  // >
-  //   <g strokeLinecap="butt" vectornatorLayerName="Layer 1">
-  //     <path
-  //       fill="#dfe3e9"
-  //       stroke="#f5eeee"
-  //       strokeOpacity="0"
-  //       strokeWidth="0.1"
-  //       d="M21.65 787.5L346.41 600l389.712 225-324.76 187.5-389.711-225z"
-  //       vectornatorShadowAngle="0.462"
-  //       vectornatorShadowColor="#322b2b"
-  //       vectornatorShadowOffset="5.815"
-  //       vectornatorShadowOpacity="0.549"
-  //       vectornatorShadowRadius="19.614"
-  //     />
-  //     <path
-  //       fill="#cbd4d8"
-  //       stroke="#e1e8eb"
-  //       d="M346.41 25L21.65 212.5"
-  //       vectornatorShadowAngle="0.416"
-  //       vectornatorShadowColor="#797d7f"
-  //       vectornatorShadowOffset="0"
-  //       vectornatorShadowOpacity="1"
-  //       vectornatorShadowRadius="6.828"
-  //     />
-  //     <path
-  //       fill="#eadd8d"
-  //       fillOpacity="0"
-  //       stroke="#adb1b2"
-  //       strokeOpacity="0"
-  //       d="M21.65 212.5l389.712 225v275l-389.711-225v-275z"
-  //     />
-  //     <path
-  //       fill="#cbd4d8"
-  //       stroke="#f5eeee"
-  //       strokeOpacity="0"
-  //       d="M736.122 250L346.41 25v575l389.712 225V250z"
-  //     />
-  //     <path
-  //       fill="#afb4b7"
-  //       stroke="#f5eeee"
-  //       strokeDasharray="0,6"
-  //       strokeOpacity="0"
-  //       d="M411.362 437.5L736.122 250v575l-324.76 187.5v-575zM21.65 212.5L346.41 25v575L21.65 787.5v-575z"
-  //       vectornatorShadowAngle="1.571"
-  //       vectornatorShadowColor="#000000"
-  //       vectornatorShadowOffset="0"
-  //       vectornatorShadowOpacity="0"
-  //       vectornatorShadowRadius="0.33"
-  //     />
-  //     <path
-  //       fill="#cbd4d8"
-  //       stroke="#f5eeee"
-  //       strokeOpacity="0"
-  //       d="M21.65 487.5l319.632 184.539 70.08 40.461v300l-389.711-225v-300z"
-  //     />
-  //     <path
-  //       fill="#7ca9ef"
-  //       stroke="#f5eeee"
-  //       strokeOpacity="0"
-  //       strokeWidth="0.1"
-  //       d="M21.65 212.5L346.41 25l389.712 225-324.76 187.5-389.711-225z"
-  //       vectornatorShadowAngle="0.462"
-  //       vectornatorShadowColor="#322b2b"
-  //       vectornatorShadowOffset="5.815"
-  //       vectornatorShadowOpacity="0.549"
-  //       vectornatorShadowRadius="19.614"
-  //     />
-  //   </g>
-  // </svg>
   );
 }
 

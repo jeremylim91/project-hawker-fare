@@ -29,9 +29,9 @@ export default function LoginCredentialsDisplay({ changeUserEmail, userEmail, up
     );
   }
   return (
-    <>
+    <div className="login-credentials-display">
       <div>Logged in as:</div>
       <div>{userEmail}</div>
-    </>
+    </div>
   );
 }

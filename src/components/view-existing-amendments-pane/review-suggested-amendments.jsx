@@ -33,15 +33,20 @@ export default function ReviewSuggestedAmendments({ mode }) {
   return (
     <div className="container review-suggested-amendments-container">
       <div className="row">
-        <div className="col">
+        <div className="col review-amendments-header">
+          Review all amendment submissions
+        </div>
+      </div>
+      <div className="row">
+        <div className="col amendment-table-headers">
           Stall Name
         </div>
-        <div className="col">
+        <div className="col amendment-table-headers">
           Stall number
         </div>
-        <div className="col">
+        {/* <div className="col">
           Submitted by
-        </div>
+        </div> */}
       </div>
       <ListOfAmendments
         allAmendmentsFromDb={allAmendmentsFromDb}

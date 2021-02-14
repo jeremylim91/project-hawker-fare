@@ -23,10 +23,10 @@ export default function initStallsController(db) {
 
       const compare = (a, b) => {
         if (getStallIndexFromUnitNum(a.unitNum) < getStallIndexFromUnitNum(b.unitNum)) {
-          return -1;
+          return +1;
         }
         if (getStallIndexFromUnitNum(a.unitNum) > getStallIndexFromUnitNum(b.unitNum)) {
-          return +1;
+          return -1;
         }
         return 0;
       };

@@ -54,8 +54,6 @@ export default function NavBar({
         updateMode={updateMode}
       />
 
-      {/* <LoginModal changeUserEmail={changeUserEmail} /> */}
-
       <SuggestAmendments updateMode={updateMode} />
       <LoginCredentialsDisplay
         changeUserEmail={changeUserEmail}

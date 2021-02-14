@@ -1,4 +1,5 @@
 export default function initAmendmentsController(db) {
+  // db query to create a new suggested amendment entry
   const create = async (req, res) => {
     // get the items out of the body
     const {
@@ -39,7 +40,7 @@ export default function initAmendmentsController(db) {
       console.log(error);
     }
   };
-
+  // db query to get all amendments to display for high-level review
   const index = async (req, res) => {
     try {
       const instancesOfAllSuggestedAmendments = await db.Amendment.findAll({

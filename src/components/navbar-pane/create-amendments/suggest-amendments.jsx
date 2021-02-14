@@ -25,8 +25,6 @@ export default function SuggestAmendments({ updateMode }) {
 
     axios.get('/getStallDetails')
       .then(({ data }) => {
-        console.log('gettingStalls:');
-        console.log(data);
         setStallsForDropdown(data);
         handleShow();
       })
@@ -47,7 +45,7 @@ export default function SuggestAmendments({ updateMode }) {
       <Button
         variant="primary"
         onClick={handleReqToSuggestedAmendment}
-        className="navBarButtons"
+        className="navBarButtons removeButtonStyle"
       >
         Suggest amendment
       </Button>

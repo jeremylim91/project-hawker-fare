@@ -25,7 +25,7 @@ export default function ListOfAmendments({ allAmendmentsFromDb, selectedAmendmen
   // fn to surroudn each ammendment with html tags to put them into a bootstrap grid
   const rowsOfAmendments = allAmendmentsFromDb.map((element, index) => (
     <>
-      <div className="row">
+      <div className="row amendment-rows">
         <div className="col">
           {element.name}
         </div>

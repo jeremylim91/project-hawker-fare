@@ -13,12 +13,7 @@ export default function App() {
   // useState tt determines wat is in main display (i.e. hawkerDisplay or reviewSuggestedAmendments)
   const [mode, setMode] = useState('hawkerDisplay');
 
-  // // useState that contains every instance of an amendment
-  // const [allAmendmentsFromDb, setAllAmendmentsFromDb] = useState(null);
-
-  // const updateAllAmendmentsFromDb = (value) => setAllAmendmentsFromDb(value);
-
-  const updateListOfCategories = (newListOfCategories) => setListOfCategories(newListOfCategories);
+  const updateListOfCategories = (value) => setListOfCategories(value);
 
   const updateCategoriesToHighlight = (clickedCategoryId, unselectExistingHighlightedStalls) => {
     /*= ========================================
@@ -74,7 +69,8 @@ export default function App() {
   };
 
   return (
-    <div>
+    // <div className="main-container">
+    <>
       <NavBar
         updateCategoriesToHighlight={updateCategoriesToHighlight}
         categoriesToHighlight={categoriesToHighlight}
@@ -94,7 +90,6 @@ export default function App() {
               updateCategoriesToHighlight={updateCategoriesToHighlight}
             />
           );
-
         case 'reviewSuggestedAmendments':
           return (
             <ReviewSuggestedAmendments
@@ -102,19 +97,13 @@ export default function App() {
               mode={mode}
             />
           );
-
         default:
           return (
-            // <HawkerDisplay
-            //   className="mainDisplay"
-            //   categoriesToHighlight={categoriesToHighlight}
-            //   updateCategoriesToHighlight={updateCategoriesToHighlight}
-            // />
             null
           );
       }
       })()}
-
-    </div>
+      {/* </div> */}
+    </>
   );
 }

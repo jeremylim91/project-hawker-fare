@@ -1,142 +1,140 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import Draggable, { DraggableCore } from 'react-draggable'; // Both at the same time
 import StallDetailsModal from './stall-details-modal.jsx';
 import BackgroundLayout from '../../icons/background-layout.jsx';
-import Toilet from '../../icons/toilet.jsx';
+// import { ReactComponent as BackgroundLayout } from '../../icons/background-layout-test2.svg';
+import { ReactComponent as Toilet } from '../../icons/Toilets.svg';
 import MakeStallEls from './make-stall-els.jsx';
+// import { ReactComponent as BackgroundLayout } from '../../icons/Layout_Sgm_3_test1.svg';
 
 export default function HawkerDisplay({ categoriesToHighlight, updateCategoriesToHighlight }) {
-  const [listOfStalls, setListOfStalls] = useState([]);
+  // const [listOfStalls, setListOfStalls] = useState([]);
   const [showStallDetailsViaModal, setShowStallDetailsViaModal] = useState(false);
   const [stallDetails, setStallDetails] = useState(null);
+  const [dragState, setDragState] = useState(
+    {
+      activeDrags: 0,
+      deltaPosition: { x: 0, y: 0 },
+      controlledPosition: { x: -400, y: 200 },
+    },
+  );
 
   const handleClose = () => setShowStallDetailsViaModal(false);
   const handleShow = () => setShowStallDetailsViaModal(true);
   const updateStallDetails = (value) => setStallDetails(value);
 
-  // query the db to get stall info so stalls can be displayed
-  useEffect(() => {
-    // axios request to db
-    axios.get('/getStallDetails')
-      .then(({ data }) => {
-        console.log(data);
-        // update state with new data
-        setListOfStalls(data);
-      })
-      .catch((error) => (console.log(error)));
-  }, []);
+  const handleDrag = (e, ui) => {
+    const { x, y } = dragState.deltaPosition;
+    const newDragState = { ...dragState };
+    newDragState.deltaPosition = {
+      x: x + ui.deltaX,
+      y: y + ui.deltaY,
+    };
+    setDragState(newDragState);
+  };
 
-  // // handle what happens when the user clicks on a stall
-  // const displayStallInfoModal = (e, index) => {
-  //   // update the state with details of the stall that user selected
-  //   // note: have to offset by -1 becos dealing w/ array vs stall num
-  //   setStallDetails(listOfStalls[index]);
-  //   handleShow();
-  // };
+  const onStart = () => {
+    const newDragState = { ...dragState };
+    newDragState.activeDrags += dragState.activeDrags;
 
-  // use .map to make a DOM elements for each stall
-  // const MakeDivsForStalls = () => {
-  //   console.log('making divs for stalls');
-  //   const stallsInBottomRow = listOfStalls.map((eachStall, index) => {
-  //     let highlightClass = null;
-  //     const position = null;
+    setDragState(newDragState);
+  };
 
-  //     // When a cuisine is selected, highlight the div of stalls that match that cuisine
-  //     if (categoriesToHighlight !== null) {
-  //       if ((`${eachStall.categoryId}` in categoriesToHighlight) && (categoriesToHighlight[`${eachStall.categoryId}`] === true)) {
-  //         highlightClass = 'highlight';
-  //       }
-  //     }
-  //     // assign className based on unitNum. className will be used to define the position
-  //     // if (getStallIndexFromUnitNum(eachStall.unitNum) <= 9) {
-  //     //   position = 'bottomRowSection1';
-  //     // } else if (getStallIndexFromUnitNum(eachStall.unitNum) >= 10 && (getStallIndexFromUnitNum(eachStall.unitNum) <= 21)) {
-  //     //   position = 'bottomRowSection2';
-  //     // } else if (getStallIndexFromUnitNum(eachStall.unitNum) >= 22 && (getStallIndexFromUnitNum(eachStall.unitNum) <= 25)) {
-  //     //   position = 'middleRowSection1';
-  //     // } else if (getStallIndexFromUnitNum(eachStall.unitNum) >= 26 && (getStallIndexFromUnitNum(eachStall.unitNum) <= 33)) {
-  //     //   position = 'middleRowSection2';
-  //     // } else if (getStallIndexFromUnitNum(eachStall.unitNum) >= 34 && (getStallIndexFromUnitNum(eachStall.unitNum) <= 46)) {
-  //     //   position = 'topRow';
-  //     // }
-  //     return (
-  //       <button
-  //         type="button"
-  //         className={`${highlightClass} ${position} stalls`}
-  //         key={eachStall.id}
-  //         onClick={(e) => {
-  //           // use item's index to identify which stall the  user has selected
-  //           displayStallInfoModal(e, index);
-  //         }}
-  //       >
-  //         <SvgForStallsRedRoof unitNum={eachStall.unitNum} />
-  //       </button>
-  //     );
-  //   });
-  //   const stallsInTopRow = listOfStalls.map((eachStall, index) => {
-  //     let highlightClass = '';
+  const onStop = () => {
+    const newDragState = { ...dragState };
+    newDragState.activeDrags -= dragState.activeDrags;
 
-  //     // When a cuisine is selected, highlight the div of stalls that match that cuisine
-  //     if (categoriesToHighlight !== null) {
-  //       if ((`${eachStall.categoryId}` in categoriesToHighlight) && (categoriesToHighlight[`${eachStall.categoryId}`] === true)) {
-  //         highlightClass = 'highlight';
-  //       }
-  //     }
-  //     return (
-  //       <button
-  //         type="button"
-  //         className={`${highlightClass} stalls`}
-  //         key={eachStall.id}
-  //         onClick={(e) => {
-  //         // use item's index to identify which stall the  user has selected
-  //           displayStallInfoModal(e, index);
-  //         }}
-  //       >
-  //         <TopRowStallIcon />
-  //       </button>
-  //     );
-  //   });
-  //   return (
-  //     <div>
-  //       <div className="topRowStallsContainer">
-  //         {stallsInTopRow}
-  //       </div>
+    setDragState(newDragState);
+  };
 
-  //       <div className="sideRowStallsContainer" />
+  // For controlled component
+  const adjustXPos = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const newDragState = { ...dragState };
 
-  //       <div className="bottomRowStallsContainer">
-  //         {stallsInBottomRow}
-  //       </div>
-  //     </div>
-  //   );
-  // };
+    const { x, y } = dragState.controlledPosition;
+    newDragState.controlledPosition = {
+      x: x - 10,
+      y,
+    };
+    setDragState(newDragState);
+  };
+  const adjustYPos = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const newDragState = { ...dragState };
+
+    const { x, y } = dragState.controlledPosition;
+    newDragState.controlledPosition = {
+      x,
+      y: y - 10,
+    };
+    setDragState(newDragState);
+  };
+
+  const onControlledDrag = (e, position) => {
+    const { x, y } = position;
+    const newDragState = { ...dragState };
+    newDragState.controlledPosition = { x, y };
+
+    setDragState(newDragState);
+  };
+  const onControlledDragStop = (e, position) => {
+    dragState.onControlledDrag(e, position);
+    dragState.onStop();
+  };
+
+  const dragHandlers = { onStart, onStop };
+
+  const { deltaPosition, controlledPosition } = dragState;
+
+  console.log('running hawkerDisplay');
+
   return (
+  // <div className="fixed-container-for-hawker-display">
+  /* <div
+      className="box"
+      style={{
+        height: '500px', width: '500px', position: 'relative', overflow: 'hidden', backgroundColor: 'black', padding: '0',
+      }}
+    > */
 
-    <div className="hawkerDisplay-container">
+  /* <div style={{ height: '1000px', width: '1000px', padding: '10px' }}> */
 
-      <div className="toilet-container">
-        <Toilet className="toilet" />
-      </div>
+    <Draggable {... dragHandlers}>
 
-      <MakeStallEls
-        listOfStalls={listOfStalls}
-        categoriesToHighlight={categoriesToHighlight}
-        updateStallDetails={updateStallDetails}
-        handleShow={handleShow}
-      />
+      <div className="hawkerDisplay-container" bounds="parent">
 
-      <BackgroundLayout className="background-layout" />
-      {/* <Layout /> */}
-      {showStallDetailsViaModal === true ? (
-        <StallDetailsModal
-          handleClose={handleClose}
+        <div className="toilet-container">
+          <Toilet />
+        </div>
+
+        <div className="wet-market">
+          Wet market
+        </div>
+
+        <MakeStallEls
+          categoriesToHighlight={categoriesToHighlight}
+          updateStallDetails={updateStallDetails}
           handleShow={handleShow}
-          show={showStallDetailsViaModal}
-          stallDetails={stallDetails}
-          updateCategoriesToHighlight={updateCategoriesToHighlight}
         />
-      ) : ''}
-    </div>
+        {/* <div className="background-layout"> */}
+        <BackgroundLayout />
+        {/* </div> */}
+
+        {showStallDetailsViaModal === true ? (
+          <StallDetailsModal
+            handleClose={handleClose}
+            handleShow={handleShow}
+            show={showStallDetailsViaModal}
+            stallDetails={stallDetails}
+            updateCategoriesToHighlight={updateCategoriesToHighlight}
+          />
+        ) : ''}
+      </div>
+    </Draggable>
 
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function Toilet() {
   return (
+
     <svg
       height="100%"
       style={{
@@ -26,7 +27,7 @@ export default function Toilet() {
         <setting key="GridSpacing" value="36" />
       </metadata>
       <defs />
-      <g id="Untitled" layerName="Untitled">
+      <g id="Untitled">
         <path d="M3.1+79.7L9.6+79.7L9.6+62.5L15.4+62.5L15.4+79.8L21.9+79.8L21.9+33.6L3.1+33.6L3.1+79.7ZM9.6+40.1L15.4+40.1L15.4+56L9.6+56L9.6+40.1Z" opacity="1" fill="#1a8deb" />
         <path d="M6.4+25.8C6.4+22.4311+9.13106+19.7+12.5+19.7C15.8689+19.7+18.6+22.4311+18.6+25.8C18.6+29.1689+15.8689+31.9+12.5+31.9C9.13106+31.9+6.4+29.1689+6.4+25.8Z" opacity="1" fill="#1a8deb" />
         <path d="M42.8+33.6L37+33.6L24.5+57.8L24.5+62.5L36.7+62.5L36.7+79.8L43.2+79.8L43.2+62.5L55.4+62.5L55.4+57.8L42.8+33.6ZM32.7+56L40+42.1L47.2+56L32.7+56Z" opacity="1" fill="#f13b99" />

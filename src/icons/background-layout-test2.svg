@@ -1,7 +1,4 @@
-import React from 'react';
 
-export default function BackgroundLayout() {
-  return (
 <svg className='background-layout' viewBox="0 0 1920 1310" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
 <g stroke="#fff" fill="#e8ecf2" stroke-linecap="butt" stroke-linejoin="miter">
 <path d="M1194.87 572l11.26-6.5 11.26 6.5-11.26 6.5-11.26-6.5z"/>
@@ -10835,6 +10832,3 @@ export default function BackgroundLayout() {
 </g>
 </g>
 </svg>
-
-  );
-}

@@ -62,6 +62,7 @@
     "method-override": "^3.0.0",
     "pg": "^8.5.1",
     "react-bootstrap": "^1.4.3",
+    "react-draggable": "^4.4.3",
     "sequelize": "^6.4.0"
   }
 }
