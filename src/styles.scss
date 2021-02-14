@@ -49,6 +49,10 @@ body {
   // width: 180%;
   width: 118em;
 }
+
+.login-credentials-display {
+  padding: 5px;
+}
 .navBar-container {
   position: absolute;
   background-color: rgb(184, 63, 63, 0.8);
@@ -58,9 +62,11 @@ body {
   width: 15rem;
   padding: 20px 5px 20px;
   z-index: 2;
-  transition: width 500ms ease;
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
 }
+
 .reset-filter-btn {
   margin-top: 1rem;
   display: block;
@@ -237,9 +243,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.login-credentials-display {
-  padding: 5px;
-}
 // .toilet {
 //   display: block;
 //   margin-left: auto;

@@ -55,20 +55,20 @@ export default function NavBar({
       />
 
       <SuggestAmendments updateMode={updateMode} />
+
+      {userIsAdmin === true && (
+        <Button
+          className=" removeButtonStyle view-amendments-btn"
+          onClick={handleClickOnViewAmendments}
+        >
+          View Amendments
+        </Button>
+      )}
       <LoginCredentialsDisplay
         changeUserEmail={changeUserEmail}
         userEmail={userEmail}
         updateUserIsAdmin={updateUserIsAdmin}
       />
-
-      {userIsAdmin === true && (
-      <Button
-        className=" removeButtonStyle view-amendments-btn"
-        onClick={handleClickOnViewAmendments}
-      >
-        View Amendments
-      </Button>
-      )}
     </div>
   );
 }
