@@ -68,7 +68,7 @@ export default function LoginModal({ changeUserEmail, updateUserIsAdmin }) {
               <div className="col-12 col-lg-8">
                 <div>
                   <input
-                    type="fPassword"
+                    type="password"
                     id="fPassword"
                     name="fPassword"
                     className="form-control"

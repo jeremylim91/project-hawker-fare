@@ -13,19 +13,26 @@ export default function initAmendmentsController(db) {
     if (Array.isArray(menu) === false) {
       // use split syntax to convert it
       menu = menu.split(',');
-      console.log('menu after split:');
-      console.log(menu);
+      // console.log('menu after split:');
+      // console.log(menu);
     }
 
-    // get the user's userId based on his cookies (only his email is stored)
-    const userInstance = await db.User.findOne({
-      where: {
-        email: req.cookies.userId,
-      },
-    });
+    let userEmail = null;
     try {
+      if (req.cookies.userId !== undefined) {
+      // get the user's userId based on his cookies (only his email is stored)
+        const userInstance = await db.User.findOne({
+          where: {
+            email: req.cookies.userId,
+          },
+        });
+        userEmail = userInstance.id;
+      } else {
+        userEmail = 1;
+      }
+
       const newAmendmentInstance = db.Amendment.create({
-        userId: userInstance.id,
+        userId: userEmail,
         unitNum,
         name,
         categoryId,
@@ -35,6 +42,9 @@ export default function initAmendmentsController(db) {
         createdAt: new Date(),
         updatedAt: new Date(),
       });
+
+      console.log('newAmendmentInstance is:');
+      console.log(newAmendmentInstance);
       res.send();
     } catch (error) {
       console.log(error);

@@ -44,7 +44,17 @@ export default function NavBar({
 
   return (
     <div className="navBar-container">
-      <p className="navbar-header">SERANGOON GARDEN MARKET </p>
+      <button
+        type="button"
+        className="navbar-header removeButtonStyle"
+        onClick={() => {
+          updateMode('hawkerDisplay');
+        }}
+      >
+        SERANGOON GARDEN MARKET
+        {' '}
+
+      </button>
 
       <MakeDivsForCategories
         listOfCategories={listOfCategories}

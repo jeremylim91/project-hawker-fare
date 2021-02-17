@@ -27,7 +27,7 @@ export default function AmendmentDetails({
 
     <Modal className="my-modal" show={show} onHide={handleClose}>
       <Modal.Header>
-        <Modal.Title>Hiaa</Modal.Title>
+        <Modal.Title>Approve amendment</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <div className="container">

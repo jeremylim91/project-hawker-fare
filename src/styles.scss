@@ -19,11 +19,12 @@ html {
   // display: flex;
 }
 .navbar-header {
-  font-family: "Freckle Face", "cursive";
-  font-weight: 900;
-  color: #ff7070;
-  font-size: 1.5rem;
-  padding-left: 0.8rem;
+  font-family: "Freckle Face", "cursive" !important;
+  font-weight: 900 !important;
+  color: #ff7070 !important;
+  font-size: 1.5rem !important;
+  padding-left: 0.8rem !important;
+  text-align: left !important;
 }
 .cuisines-header {
   margin-top: 1rem;
@@ -65,6 +66,7 @@ body {
   overflow: scroll;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .reset-filter-btn {
@@ -74,7 +76,7 @@ body {
   margin-right: auto;
 }
 .no-amendments-to-display {
-  margin-top: 5rem;
+  // margin-top: 5rem;
   margin-left: 15rem;
 }
 
@@ -99,7 +101,8 @@ body {
   // background-image: url(./icons/tiles-2.svg);
 }
 .review-suggested-amendments-container {
-  margin-top: 40px;
+  // margin-top: 40px;
+  margin-left: 15rem;
 }
 .topRowSection1Container {
   position: absolute;

@@ -20,6 +20,13 @@ module.exports = {
     ================================================ */
     const usersList = [
       {
+        email: 'guest',
+        password: getHashedString('password1'),
+        is_admin: false,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
         email: 'admin_1@gmail.com',
         password: getHashedString('password1'),
         is_admin: true,
